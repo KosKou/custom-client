@@ -61,6 +61,9 @@ const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./components/Users/UsersListComponent'));
 const User = React.lazy(() => import('./components/Users/UserComponent'));
 const DashboardS = React.lazy(() => import('./views/Dashboard/DashboardS'));
+const Wallets = React.lazy(() => import('./components/Pages/WalletList'));
+const Transaction = React.lazy(() => import('./components/Pages/Transaction'));
+
 
 const Known = React.lazy(() => import('./components/Reports/KnowledgeReport'));
 const Category = React.lazy(() => import('./components/Reports/CategoryReport'));
@@ -70,6 +73,8 @@ const Type = React.lazy(() => import('./components/Reports/TypeReport'));
 const routes = [
   { path: '/', name: 'Home', component: DefaultLayout, exact: true, roles: ["USER","ADMIN"] },
   { path: '/dashboard', name: 'Dashboard', component: DashboardS, roles: ["USER","ADMIN"] },
+  { path: '/transaction', name: 'Transaction', component: Transaction, roles: ["USER","ADMIN"] },
+  { path: '/wallets', name: 'Wallets', component: Wallets, roles: ["USER","ADMIN"] },
   { path: '/theme', name: 'Theme', component: Colors, exact: true, roles: ["USER","ADMIN"] },
   { path: '/theme/colors', name: 'Colors', component: Colors, roles: ["USER","ADMIN"] },
   { path: '/theme/typography', name: 'Typography', component: Typography, roles: ["USER","ADMIN"] },

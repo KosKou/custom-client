@@ -3,6 +3,7 @@ import data from "../../views/Tables/DataTable/_data";
 import UsersDataService from "../../api/UsersDataService";
 import {Card, CardHeader, CardBody} from 'reactstrap';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { Route , withRouter} from 'react-router-dom';
 import 'react-bootstrap-table/dist//react-bootstrap-table-all.min.css';
 import AuthenticationService from "../../api/AuthenticationService";
 import moment from "moment";
@@ -55,7 +56,7 @@ class UserList extends Component{
   checkUserWallets(id){
     console.log("Wallets of " + id)
     // /users/${email}
-    // this.props.history.push(`/wallets/${id}`)
+    this.props.history.push(`/wallets/${id}`)
   }
 
   render() {
@@ -98,7 +99,7 @@ class UserList extends Component{
                   <td>{user.enabled.toString()}</td>
                   <td>{user.status}</td>
                   <td>{moment(user.createdDate).format("YYYY-MM-DD")}</td>
-                  <td><button className="btn btn-success" onClick={() => this.checkUserWallets(user.id)}>Check Wallets</button></td>
+                  <td><button className="btn btn-success" onClick={() => this.checkUserWallets(user.email)}>Check Wallets</button></td>
                 </tr>
               }
             )
@@ -110,4 +111,4 @@ class UserList extends Component{
   }
 }
 
-export default UserList;
+export default withRouter(UserList);

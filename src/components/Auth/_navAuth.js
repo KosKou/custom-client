@@ -23,7 +23,7 @@ export default {
     {
       roles: ["ADMIN"], //BG001
       name: 'Usuarios',
-      url: '/users',
+      url: '/dashboard',
       icon: 'icon-user',
     },
     {
@@ -38,8 +38,8 @@ export default {
     },
     {
       roles: ["USER", "ADMIN", "SPECIALIST"], //BG001
-      name: 'Historial',
-      url: '/users',
+      name: 'Wallets',
+      url: '/wallets',
       icon: 'icon-calendar',
     }
     // ,
