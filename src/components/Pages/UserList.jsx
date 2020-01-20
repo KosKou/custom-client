@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
-import data from "../../views/Tables/DataTable/_data";
 import UsersDataService from "../../api/UsersDataService";
-import {Card, CardHeader, CardBody} from 'reactstrap';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import { Route , withRouter} from 'react-router-dom';
 import 'react-bootstrap-table/dist//react-bootstrap-table-all.min.css';
 import AuthenticationService from "../../api/AuthenticationService";
